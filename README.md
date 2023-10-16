@@ -1,3 +1,6 @@
+## News:
+We will release the code upon the publication.
+
 ## Installation
 Please install the anaconda firstly.
 ```shell
