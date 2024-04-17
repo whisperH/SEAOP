@@ -81,7 +81,7 @@ python train_SEAOP.py -c ./configs/Hela/boost.yaml
 ```
 where "logs_dir" is defined in XXXX.yaml with "logs_dir" 
 
-2. putting [model_selection](https://github.com/whisperH/SEAOP/tree/main/Result/Hela_boost_repeat100/outliers) in .\Result\Hela_boost_repeat100\outliers
+2. putting [model_selection.npy](https://drive.google.com/file/d/1fP4tmS9iSBYGMhyP14ugkRyBZDmxVIlC/view?usp=drive_link) in .\Result\Hela_boost_repeat100\outliers
 
 3. please make sure these yields as following in XXX.yaml
 4. infer new dataset
