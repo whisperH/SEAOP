@@ -1,6 +1,5 @@
 ## News:
-We will release the code upon the publication.
-
+This is the official code for: [SEAOP: a statistical ensemble approach for outlier detection in quantitative proteomics data](https://academic.oup.com/bib/article/25/3/bbae129/7638267)
 ## Installation
 Please install the anaconda firstly.
 ```shell
@@ -75,9 +74,18 @@ runModelSelect: true # Step 4: run model on the fake data
 python train_SEAOP.py -c ./configs/Hela/boost.yaml
 ```
 
-## test model
-please make sure these yields as following in XXX.yaml
-```bash for train new dataset
+## infer model
+1. create new folder with path: 
+```bash
+{logs_dir}\outliers
+```
+where "logs_dir" is defined in XXXX.yaml with "logs_dir" 
+
+2. putting [model_selection](https://github.com/whisperH/SEAOP/tree/main/Result/Hela_boost_repeat100/outliers) in .\Result\Hela_boost_repeat100\outliers
+
+3. please make sure these yields as following in XXX.yaml
+4. infer new dataset
+```bash for infer new dataset
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HCC_P.csv runInferSingle True runBoostTest True
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HCC_T.csv runInferSingle True runBoostTest True
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile LADC_N.csv runInferSingle True runBoostTest True
@@ -89,6 +97,8 @@ python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HelaGr
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HelaGroups.csv runInferSingle True runBoostTest False multiple_thread False
 ```
 
+5. validate fake dataset
+   1. put fake data in path: “datasets/Format/”
 ```bash for validate on Fake data
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile fake-shuffle_ratio-0.1-repeat_time-0.csv runInferSingle false runBoostTest false validateFakeData true
 ```
