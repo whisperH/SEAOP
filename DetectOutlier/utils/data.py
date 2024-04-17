@@ -787,4 +787,6 @@ def data_config(args):
     args.prepare_infer_data_dir = os.path.join(args.infer_log_dir, f'step1_{args.joint_data}_scale')
     PathManager.mkdirs(args.infer_log_dir)
     PathManager.mkdirs(args.prepare_infer_data_dir)
+    if not PathManager.exists(os.path.join(args.logs_dir, "outliers", args.infer_datafile.split(".csv")[0])):
+        PathManager.mkdirs(os.path.join(args.logs_dir, "outliers", args.infer_datafile.split(".csv")[0]))
     return args
