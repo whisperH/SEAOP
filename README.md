@@ -92,9 +92,10 @@ python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile LADC_N
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile LADC_T.csv runInferSingle True runBoostTest True
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HelaGroups.csv runInferSingle True runBoostTest True
 ```
-
-```bash for time cost of single model
-python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HelaGroups.csv runInferSingle True runBoostTest False multiple_thread False
+Note:
+If your device is laptop or computer instead of Server, please set multiple_thread as False in the command line.:
+```bash for infer new dataset
+python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HelaGroups.csv runInferSingle True runBoostTest True multiple_thread False
 ```
 
 5. validate fake dataset
