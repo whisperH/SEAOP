@@ -97,9 +97,3 @@ If your device is laptop or computer instead of Server, please set multiple_thre
 ```bash for infer new dataset
 python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile HelaGroups.csv runInferSingle True runBoostTest True multiple_thread False
 ```
-
-5. validate fake dataset
-   1. put fake data in path: “datasets/Format/”
-```bash for validate on Fake data
-python infer_SEAOP.py -c ../../configs/Hela/boost_100.yaml infer_datafile fake-shuffle_ratio-0.1-repeat_time-0.csv runInferSingle false runBoostTest false validateFakeData true
-```
